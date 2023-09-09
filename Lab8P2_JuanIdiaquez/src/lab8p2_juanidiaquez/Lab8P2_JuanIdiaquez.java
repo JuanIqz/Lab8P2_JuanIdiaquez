@@ -82,13 +82,13 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
         TablaE = new javax.swing.JTable();
         jToggleButton5 = new javax.swing.JToggleButton();
         jPanel5 = new javax.swing.JPanel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jProgressBar2 = new javax.swing.JProgressBar();
-        jProgressBar3 = new javax.swing.JProgressBar();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        BarraN1 = new javax.swing.JProgressBar();
+        BarraN2 = new javax.swing.JProgressBar();
+        BarraN3 = new javax.swing.JProgressBar();
+        ComboES = new javax.swing.JComboBox<>();
+        ComboN1E = new javax.swing.JComboBox<>();
+        ComboN2E = new javax.swing.JComboBox<>();
+        ComboN3E = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -450,21 +450,24 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Listar Eventos", jPanel7);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboESActionPerformed(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel14.setText("Nadador1");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel15.setText("Nadador2");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel16.setText("Nadador3");
 
-        jLabel14.setText("jLabel14");
-
-        jLabel15.setText("jLabel15");
-
-        jLabel16.setText("jLabel16");
-
-        jToggleButton6.setText("jToggleButton6");
+        jToggleButton6.setText("Simular");
+        jToggleButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jToggleButton6MouseClicked(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setText("Evento");
@@ -477,18 +480,24 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(ComboN1E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComboN2E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ComboN3E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(76, 76, 76))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jProgressBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jProgressBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                            .addComponent(BarraN3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BarraN2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BarraN1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 257, Short.MAX_VALUE)
                         .addComponent(jLabel15)
                         .addGap(95, 95, 95))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -501,15 +510,10 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
                         .addComponent(jLabel16)
                         .addGap(88, 88, 88))))
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(jToggleButton6))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(99, 99, 99)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ComboES, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -520,25 +524,25 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComboN1E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComboES, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BarraN1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(20, 20, 20)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComboN2E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BarraN2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BarraN3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
                 .addComponent(jLabel16)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton6)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ComboN3E, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62))
         );
 
@@ -623,7 +627,15 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
             }
         }
         JOptionPane.showMessageDialog(this, "Nadador creado con exito");
-        
+        DefaultComboBoxModel m= (DefaultComboBoxModel) ComboN1E.getModel();
+        m.addAll(Nadadores);
+        ComboN1E.setModel(m);
+        DefaultComboBoxModel x= (DefaultComboBoxModel) ComboN2E.getModel();
+        x.addAll(Nadadores);
+        ComboN2E.setModel(x);
+        DefaultComboBoxModel y= (DefaultComboBoxModel) ComboN3E.getModel();
+        y.addAll(Nadadores);
+        ComboN3E.setModel(y);
     }//GEN-LAST:event_jToggleButton2MouseClicked
 
     private void ComboDistanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboDistanciaActionPerformed
@@ -659,9 +671,12 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
         }
         int distancia= Integer.parseInt(Distancia);
         int records= Integer.parseInt(TextoRecord.getText());
-        Eventos.add(new Eventos(Estilo, distancia, records));
+        eventos.add(new Eventos(Estilo, distancia, records));
         JOptionPane.showMessageDialog(this, "Evento creado con exito");
-        AgregarArchIvoE(Eventos.get(Eventos.size()-1));
+        AgregarArchIvoE(eventos.get(eventos.size()-1));
+        DefaultComboBoxModel m= (DefaultComboBoxModel) ComboES.getModel();
+        m.addAll(eventos);
+        ComboES.setModel(m);
     }//GEN-LAST:event_jToggleButton3MouseClicked
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
@@ -685,12 +700,79 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
     private void jToggleButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton5MouseClicked
         DefaultTableModel modelotabla = (DefaultTableModel) TablaE.getModel();
 
-        for (int i = 0; i < Eventos.size(); i++) {
-            Object[] object = {Eventos.get(i).Estilos, Eventos.get(i).Distancia, Eventos.get(i).RecordS};
+        for (int i = 0; i < eventos.size(); i++) {
+            Object[] object = {eventos.get(i).Estilos, eventos.get(i).Distancia, eventos.get(i).RecordS};
             modelotabla.addRow(object);
         }
         TablaE.setModel(modelotabla);
     }//GEN-LAST:event_jToggleButton5MouseClicked
+
+    private void ComboESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboESActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboESActionPerformed
+
+    private void jToggleButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton6MouseClicked
+        Eventos e = ((Eventos) ComboES.getSelectedItem());
+        int Distancia= e.getDistancia();
+        String Estilo= e.getEstilos();
+        Nadador N1= ((Nadador)ComboN1E.getSelectedItem());
+        Nadador N2= ((Nadador)ComboN2E.getSelectedItem());
+        Nadador N3= ((Nadador)ComboN3E.getSelectedItem());
+        boolean estilo= false;
+        boolean distancia= false;
+        if (Estilo.equalsIgnoreCase(N1.getEstiloN())) {
+            if (Estilo.equalsIgnoreCase(N2.getEstiloN())) {
+                if (Estilo.equalsIgnoreCase(N3.getEstiloN())) {
+                    estilo=true;
+                }
+            }
+        }
+        if (Distancia==N1.getDistancia()) {
+            if (Distancia==N2.getDistancia()) {
+                if (Distancia==N3.getDistancia()) {
+                    distancia=true;
+                }
+            }
+        }
+        
+        if (distancia==true && estilo==true) {
+            BarraN1 Nada1= new BarraN1(Distancia, BarraN1);
+            Nada1.run();
+            BarraN2 Nada2= new BarraN2(Distancia, BarraN2);
+            Nada2.run();
+            BarraN3 Nada3= new BarraN3(Distancia, BarraN3);
+            Nada1.run();
+            
+            for (int i = 1; i < 4; i++) {
+                int ran= (int) ((Math.random() * (20 - 0) + 0));
+                if (Nada1.winner) {
+                    if (Nada2.winner) {
+                        if (Nada3.winner) {
+                            switch (i) {
+                                case 1:
+                                    
+                                    Nada1.setRandom(ran);
+                                    break;
+                                case 2:
+                                    Nada2.setRandom(ran);
+                                    break;
+                                    case 3:
+                                    Nada3.setRandom(ran);
+                                    break;
+                            }
+                        }else{
+                        i=10;
+                        }
+                    }else{
+                        i=10;
+                    }
+                }else{
+                    i=10;
+                
+                        }
+                    }
+                }
+    }//GEN-LAST:event_jToggleButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -728,9 +810,16 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar BarraN1;
+    private javax.swing.JProgressBar BarraN2;
+    private javax.swing.JProgressBar BarraN3;
     private javax.swing.JComboBox<String> ComboDistancia;
+    private javax.swing.JComboBox<String> ComboES;
     private javax.swing.JComboBox<String> ComboEstiloE;
     private javax.swing.JComboBox<String> ComboEstiloN;
+    private javax.swing.JComboBox<String> ComboN1E;
+    private javax.swing.JComboBox<String> ComboN2E;
+    private javax.swing.JComboBox<String> ComboN3E;
     private javax.swing.JComboBox<String> ComboNacionalidad;
     private javax.swing.JTextField DistanciaNadador;
     private javax.swing.JTextField EdadNadador;
@@ -743,10 +832,6 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
     private javax.swing.JTable TablaE;
     private javax.swing.JTable TablaN;
     private javax.swing.JTextField TextoRecord;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -771,9 +856,6 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JProgressBar jProgressBar2;
-    private javax.swing.JProgressBar jProgressBar3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -786,7 +868,7 @@ public class Lab8P2_JuanIdiaquez extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 ArrayList <Pais> Paises = new ArrayList();
 ArrayList <Nadador> Nadadores = new ArrayList();
-ArrayList <Eventos> Eventos = new ArrayList();
+ArrayList <Eventos> eventos = new ArrayList();
     
       public void AgregarArchIvo(Pais pais) {
         try {
